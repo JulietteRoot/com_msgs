@@ -69,7 +69,8 @@ class MsgsModelMessagerie extends JModelList
 		{			
 			$query->order($db->escape("m.created desc")); // tri par défaut	
 		}
-								
+
+		var_dump($query);
 		return $query;
 	}
 	
