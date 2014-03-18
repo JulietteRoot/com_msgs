@@ -20,10 +20,12 @@
 			<folder>tables</folder>
 			<folder>views</folder>
 		</files>
+		
 		<languages folder="admin">
-			<language tag="fr-FR">language/fr-FR.com_msgs.ini</language>
-			<language tag="fr-FR">language/fr-FR.com_msgs.sys.ini</language>
+			<language tag="fr-FR">language/fr-FR/fr-FR.com_msgs.ini</language>
+			<language tag="fr-FR">language/fr-FR/fr-FR.com_msgs.sys.ini</language>
 		</languages>
+		
 	</administration>
 	
 </extension>
