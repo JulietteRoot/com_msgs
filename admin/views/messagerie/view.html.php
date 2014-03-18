@@ -27,7 +27,7 @@ class MsgsViewMessagerie extends JViewLegacy
 		$this->filterForm    = $this->get('FilterForm'); // recherche
 		$this->activeFilters = $this->get('ActiveFilters');  
 		
-//         // Récupération des paramiètres du composant.
+//         // Récupération des paramètres du composant.
 //         $this->params = &JComponentHelper::getParams( 'com_msgs' );
 //         $this->sidebar = ComptaetatsHelper::showMenu('recapitulatifjournaux'); // vue courante en surbrillance
         
@@ -48,7 +48,7 @@ class MsgsViewMessagerie extends JViewLegacy
 
         // Ajout d'un lien vers la page d'aide.
         $bar = & JToolBar::getInstance('toolbar');
-        //JToolbarHelper::help('JHELP_COMPONENTS_COMPTACONFIG');  lien vers l'aide
+        //JToolbarHelper::help('JHELP_COMPONENTS_COMPTACONFIG');  // lien vers l'aide
     }
     
     /** Méthode retournant les éléments de tris. */

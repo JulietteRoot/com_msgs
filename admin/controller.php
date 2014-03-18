@@ -7,7 +7,7 @@
  * @author		DeltaCE
 */
 
-// Accés direct refusé.
+// Accès direct refusé.
 defined('_JEXEC') or die;
 
 // Importation de la classe Controller
