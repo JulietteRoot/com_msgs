@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.2" method="upgrade">
+	<name>COM_MSGS</name>
+	<author>Julie</author>
+	<creationDate>March 2014</creationDate>
+	<copyright>(C) 2014 Bla. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<authorEmail>bla@mail.com</authorEmail>
+	<authorUrl>www.bla.com</authorUrl>
+	<version>0.0.1</version>
+	<description>COM_MSGS_DESCRIPTION</description>
+
+	<administration>
+		<menu>COM_MSGS_MENU</menu>
+		<files folder="admin">
+			<filename>controller.php</filename>
+			<filename>index.html</filename>
+			<filename>msgs.php</filename>
+			<folder>models</folder>
+			<folder>tables</folder>
+			<folder>views</folder>
+		</files>
+		<languages folder="admin">
+			<language tag="fr-FR">language/fr-FR.com_msgs.ini</language>
+			<language tag="fr-FR">language/fr-FR.com_msgs.sys.ini</language>
+		</languages>
+	</administration>
+	
+</extension>
