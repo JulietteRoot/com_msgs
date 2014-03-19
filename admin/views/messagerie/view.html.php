@@ -42,6 +42,21 @@ class MsgsViewMessagerie extends JViewLegacy
         // Ajout d'un lien vers la page d'aide.
         $bar = & JToolBar::getInstance('toolbar');
         //JToolbarHelper::help('JHELP_COMPONENTS_COMPTACONFIG');  // lien vers l'aide
+        
+    	$canDo = MsgsHelper::getActions("messagerie"); // nom de la vue
+        
+        // Nouveau
+        if ($canDo->get('core.create'))
+        {
+        	JToolBarHelper::addNew('message.add', 'JTOOLBAR_NEW');
+        }
+        
+        // Editer
+        if ($canDo->get('core.edit'))
+        {
+        	JToolBarHelper::editList('message.edit', 'JTOOLBAR_EDIT');
+        }
+        
     }
     
     /** Méthode retournant les éléments de tris. */
