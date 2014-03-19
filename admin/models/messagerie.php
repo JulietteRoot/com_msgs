@@ -34,8 +34,9 @@ class MsgsModelMessagerie extends JModelList
 		$query = $db->getQuery(true);
 	
 		// Requête de base pour le modèle.
-		$query->select('m.*, DATE_FORMAT(m.created, "%d/%m/%Y") as created') // format FR (l'alias peut porter le nom du champ)
-			  ->from('#__msgs_messagerie AS m');
+		$query->select('m.*, u.name, DATE_FORMAT(m.created, "%d/%m/%Y") as created') // format FR (l'alias peut porter le nom du champ)
+			  ->from('#__msgs_messagerie AS m')
+			  ->leftjoin('#__users AS u ON m.created_by = u.id');
 			
 		// Mise en place du filtre de recherche par mot clé.
 		$search = $this->getState('filter.search');

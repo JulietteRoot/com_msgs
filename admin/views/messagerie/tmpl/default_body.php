@@ -16,7 +16,12 @@ foreach ($this->items as $i => $item) : ?>
 		</td>
 		
 		<td>
-			<?php echo  $item->created_by; ?>
+			<?php
+				if(strlen($item->name) > 0){
+					echo  $item->name; // si plusieurs names, utiliser un alias pour désigner le bon
+				}else{
+					echo JText::_('COM_MSGS_ANONYME');
+				}?>
 		</td>
 		
 		<td>

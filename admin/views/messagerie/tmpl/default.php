@@ -45,5 +45,4 @@ $sortFields = $this->getSortFields(); ?>
 			<input type="hidden" name="filter_order_Dir" value="<?php echo $listDirn; ?>" /> <!-- l'ordre -->
 			<?php echo JHtml::_('form.token'); ?> <!-- sécurité -->
 		</div>
-	</div>
 </form>
