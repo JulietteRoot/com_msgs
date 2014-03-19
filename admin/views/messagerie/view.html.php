@@ -37,7 +37,7 @@ class MsgsViewMessagerie extends JViewLegacy
     protected function addToolbar()
     {
         // Titre de la page
-        JToolBarHelper::title(JText::_('COM_MSGS_TITRE_MESSAGERIE'), 'list-2'); // 2ème param = l'icône
+        JToolBarHelper::title(JText::_('COM_MSGS_TITRE_MESSAGERIE'), 'list-2'); // 2ème param = l'icône qui apparait à côté du titre
 
         // Ajout d'un lien vers la page d'aide.
         $bar = & JToolBar::getInstance('toolbar');
