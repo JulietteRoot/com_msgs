@@ -21,10 +21,12 @@ class MsgsModelMessagerie extends JModelList
 	}
 	
 	/** Méthode retournant la connexion à la table des écritures. */
-	public function getTable($type = 'message', $prefix = 'Msgs', $config = array()) // pour donner le nom à la table → MsgsTableMessage
-	{
-		return JTable::getInstance($type, $prefix, $config);
-	}
+	// NON UTILISEE ICI
+// 	public function getTable($type = 'message', $prefix = 'MsgsTable', $config = array()) // pour donner le nom à la table → MsgsTableMessage
+// 	{
+// 		return JTable::getInstance($type, $prefix, $config);
+// 	}
+
 	
 	/** Méthode formatant une requête SQL chargeant la liste des données, la renvoie sous forme de String */
 	protected function getListQuery()

@@ -41,30 +41,30 @@ class MsgsViewMessagerie extends JViewLegacy
         $bar = & JToolBar::getInstance('toolbar');
         //JToolbarHelper::help('JHELP_COMPONENTS_COMPTACONFIG');  // lien vers l'aide
         
-    	$canDo = MsgsHelper::getActions("messagerie"); // nom de la vue
+//     	$canDo = MsgsHelper::getActions("messagerie"); // nom de la vue
         
-        // Nouveau
-        if ($canDo->get('core.create'))
-        {
-        	JToolBarHelper::addNew('message.add', 'JTOOLBAR_NEW');
-        }
+//         // Nouveau
+//         if ($canDo->get('core.create'))
+//         {
+//         	JToolBarHelper::addNew('message.add', 'JTOOLBAR_NEW');
+//         }
         
-        // Editer
-        if ($canDo->get('core.edit'))
-        {
-        	JToolBarHelper::editList('message.edit', 'JTOOLBAR_EDIT');
-        }
+//         // Editer
+//         if ($canDo->get('core.edit'))
+//         {
+//         	JToolBarHelper::editList('message.edit', 'JTOOLBAR_EDIT');
+//         }
         
-        //Bouton supprimer ???
-        if ($canDo->get('core.delete'))
-        {
-        	JToolbarHelper::deleteList(false, 'messages.delete', 'JTOOLBAR_DELETE'); // ou messagerie ? deleteList(string message, string task, string caption)
+//         //Bouton supprimer ???
+//         if ($canDo->get('core.delete'))
+//         {
+//         	JToolbarHelper::deleteList(false, 'messages.delete', 'JTOOLBAR_DELETE'); // ou messagerie ? deleteList(string message, string task, string caption)
 
-        }
+//         }
 
-//         JToolBarHelper::deleteList('', 'messages.delete'); // ou messagerie ?
-//         JToolBarHelper::editList('message.edit');
-//         JToolBarHelper::addNew('message.add');
+        JToolBarHelper::deleteList('', 'messagerie.delete'); // ou messagerie ?
+        JToolBarHelper::editList('message.edit');
+        JToolBarHelper::addNew('message.add');
         
     }
     

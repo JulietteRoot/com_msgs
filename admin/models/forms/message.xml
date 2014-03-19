@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<!-- il faut mettre exactement le nom des champs dans la base -->
+	<fieldset name="message">
+			<field
+				name="id"
+				type="hidden"
+				class="readonly"
+				label="JGLOBAL_FIELD_ID_DESC"
+				size="10"
+				default="0"
+				readonly="true"/>
+				
+			<field
+				name="subject"
+  				type="text"
+				label="COM_MSGS_OBJET"
+				description="COM_MSGS_OBJET"
+				required="true" />
+				
+				<field
+				name="content"
+  				type="text"
+				label="COM_MSGS_CONTENU"
+				description="COM_MSGS_CONTENU"
+				required="true" />
+	</fieldset>
+</form>
