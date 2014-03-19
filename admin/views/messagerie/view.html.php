@@ -26,8 +26,7 @@ class MsgsViewMessagerie extends JViewLegacy
         
         // Ajout de la barre d'outils.
         $this->addToolBar();
-                
-
+        
                  
         // Affichage de la page.
         parent::display($tpl);
@@ -39,7 +38,6 @@ class MsgsViewMessagerie extends JViewLegacy
         // Titre de la page
         JToolBarHelper::title(JText::_('COM_MSGS_TITRE_MESSAGERIE'), 'list-2'); // 2ème param = l'icône qui apparait à côté du titre
 
-        // Ajout d'un lien vers la page d'aide.
         $bar = & JToolBar::getInstance('toolbar');
         //JToolbarHelper::help('JHELP_COMPONENTS_COMPTACONFIG');  // lien vers l'aide
         
@@ -56,6 +54,17 @@ class MsgsViewMessagerie extends JViewLegacy
         {
         	JToolBarHelper::editList('message.edit', 'JTOOLBAR_EDIT');
         }
+        
+        //Bouton supprimer ???
+        if ($canDo->get('core.delete'))
+        {
+        	JToolbarHelper::deleteList(false, 'messages.delete', 'JTOOLBAR_DELETE'); // ou messagerie ? deleteList(string message, string task, string caption)
+
+        }
+
+//         JToolBarHelper::deleteList('', 'messages.delete'); // ou messagerie ?
+//         JToolBarHelper::editList('message.edit');
+//         JToolBarHelper::addNew('message.add');
         
     }
     
