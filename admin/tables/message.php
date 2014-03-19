@@ -1,13 +1,6 @@
 <?php
-/**
- * @package		Joomla.Administrator
- * @subpackage	com_comptaetats
 
- * @copyright	2014 - Easy CE
- * @author		DeltaCE
-*/
-
-// Accés direct refusé.
+// Accès direct refusé.
 defined('_JEXEC') or die;
 
 // Importation de la classe ControllerAdmin
@@ -22,7 +15,7 @@ class MsgsTableMessage extends JTable
 		parent::__construct('#__msgs_messagerie', 'id', $_db);
 	}
        	
-	/** Enregistre une entrée en base. */
+	/** à chaque enregistrement, ajoute une entrée en base. */
 	public function store($updateNulls = false)
 	{
 		$date = JFactory::getDate();

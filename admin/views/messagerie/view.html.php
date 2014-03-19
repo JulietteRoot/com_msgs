@@ -1,11 +1,4 @@
 <?php
-/**
- * @package		Joomla.Administrator
- * @subpackage	com_comptaetats
-
- * @copyright	2014 - Easy CE
- * @author		DeltaCE
-*/
 
 // Accès direct refusé.
 defined('_JEXEC') or die;

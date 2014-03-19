@@ -1,11 +1,4 @@
 <?php
-/**
- * @package		Joomla.Administrator
- * @subpackage	com_comptaetats
-
- * @copyright	2014 - Easy CE
- * @author		DeltaCE
-*/
 
 // Accès direct refusé.
 defined('_JEXEC') or die;
@@ -28,12 +21,12 @@ class MsgsModelMessagerie extends JModelList
 	}
 	
 	/** Méthode retournant la connexion à la table des écritures. */
-	public function getTable($type = 'message', $prefix = 'Msgs', $config = array())
+	public function getTable($type = 'message', $prefix = 'Msgs', $config = array()) // pour donner le nom à la table → MsgsTableMessage
 	{
 		return JTable::getInstance($type, $prefix, $config);
 	}
 	
-	/** Méthode formatant une requête SQL chargeant la liste des données. */
+	/** Méthode formatant une requête SQL chargeant la liste des données, la renvoie sous forme de String */
 	protected function getListQuery()
 	{
 		// Création d'une nouvelle requete
@@ -69,11 +62,14 @@ class MsgsModelMessagerie extends JModelList
 			$query->order($db->escape("m.created desc")); // tri par défaut	
 		}
 
-		var_dump($query->dump());
+		//var_dump($query->dump());
 		return $query;
 	}
 	
-	/** Méthode permettant de gérer l'ordonancement et le tri. */
+	// on aurait ici getItem() si la méthode devait être surchargée
+	// (exécute la requête et retourne un tableau d'objets)
+	
+	/** Méthode permettant de gérer l'ordonnancement et le tri. */
 	protected function populateState($ordering = null, $direction = null)
 	{
 		$app = JFactory::getApplication();

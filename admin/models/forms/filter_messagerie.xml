@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- sert pour la barre "rechercher / outils de recherche / effacer" -->
 <form>
 	<fields name="filter">
 		<field

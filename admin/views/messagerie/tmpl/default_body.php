@@ -11,7 +11,7 @@ foreach ($this->items as $i => $item) : ?>
 		</td>
 		
 		<td>
-			<!--  à intituler comme la base -->
+			<!--  à intituler comme dans la base -->
 			<?php echo  $item->created; ?>
 		</td>
 		

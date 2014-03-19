@@ -1,11 +1,4 @@
 <?php
-/**
- * @package		Joomla.Administrator
- * @subpackage	com_comptaetats
-
- * @copyright	2014 - Easy CE
- * @author		DeltaCE
-*/
 
 // Accès direct refusé.
 defined('_JEXEC') or die;
@@ -16,11 +9,13 @@ jimport('joomla.application.component.controller');
 /** Déclaration du contrôleur principal. */
 class MsgsController extends JControllerLegacy
 {
-    protected $default_view = 'messagerie'; // nom du dossier
+    protected $default_view = 'messagerie'; // nom de la vue par défaut
 
     public function display($cachable = false, $urlparams = false)
     {
     	ini_set('display_errors', TRUE); error_reporting(E_ALL);
+    	
+    	// on pourrait placer ici les includes pour les méthodes statiques du helper 
     	
         parent::display();
         return $this;
