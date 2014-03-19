@@ -24,7 +24,7 @@ class MsgsControllerMessage extends JControllerForm
 	
 // 	public function save()
 // 	{
-// 		return parent::save();
+// 		//return parent::save();
 // 		//$this->setRedirect(html_entity_decode(JRoute::_('index.php?option=com_msgs&view=messagerie')));
 // 	}
 }

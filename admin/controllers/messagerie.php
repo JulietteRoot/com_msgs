@@ -25,7 +25,7 @@ class MsgsControllerMessagerie extends JControllerAdmin
 // 	}
 	
 	/** Méthode retournant le modèle associé. */
-	// on lui dit sur quel modèle travailler : message (sg)
+	// on lui dit sur quel modèle travailler : message (singulier)
 	public function getModel($name = 'message', $prefix = 'MsgsModel', $config = array('ignore_request' => true))
 	{
 		$model = parent::getModel($name, $prefix, $config);

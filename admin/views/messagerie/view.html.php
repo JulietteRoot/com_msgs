@@ -41,6 +41,13 @@ class MsgsViewMessagerie extends JViewLegacy
         $bar = & JToolBar::getInstance('toolbar');
         //JToolbarHelper::help('JHELP_COMPONENTS_COMPTACONFIG');  // lien vers l'aide
         
+        // cette version simple suffit pour la toolbar :
+        JToolBarHelper::deleteList('', 'messagerie.delete'); // "pluriel"
+        JToolBarHelper::editList('message.edit'); // singulier
+        JToolBarHelper::addNew('message.add'); // singulier
+        
+        // on utiliserait cette version si on avait la gestion des droits avec access.xml :
+        
 //     	$canDo = MsgsHelper::getActions("messagerie"); // nom de la vue
         
 //         // Nouveau
@@ -61,10 +68,6 @@ class MsgsViewMessagerie extends JViewLegacy
 //         	JToolbarHelper::deleteList(false, 'messages.delete', 'JTOOLBAR_DELETE'); // ou messagerie ? deleteList(string message, string task, string caption)
 
 //         }
-
-        JToolBarHelper::deleteList('', 'messagerie.delete'); // ou messagerie ?
-        JToolBarHelper::editList('message.edit');
-        JToolBarHelper::addNew('message.add');
         
     }
     
