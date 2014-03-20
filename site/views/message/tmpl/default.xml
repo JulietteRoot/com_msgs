@@ -3,6 +3,6 @@
     <layout title="message">
     	<!-- indique le titre et la description du composant 
     	qui apparaîtront dans l'interface "menu" de Joomla -->
-        <message>Permet d'écrire un message</message>
+        <message>Permet de voir ses messages</message>
     </layout>
 </metadata>

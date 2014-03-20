@@ -15,11 +15,11 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
 $sortFields = $this->getSortFields(); ?>
 
 <!--  dans action : adresse de la vue courante -->
-<form action="<?php echo html_entity_decode(JRoute::_('index.php?option=com_msgs&view=messagerie')); ?>" method="post" name="adminForm" id="adminForm">
+<form action="<?php echo html_entity_decode(JRoute::_('index.php?option=com_msgs&view=messages')); ?>" method="post" name="adminForm" id="adminForm">
 		<div id="j-main-container">
 			<?php
 			// Importation de la barre contenant les filtres.
-			echo JLayoutHelper::render('joomla.searchtools.default', array('view' => $this));
+			//echo JLayoutHelper::render('joomla.searchtools.default', array('view' => $this)); // (getGroup...)
 
 			if (empty($this->items)) : ?>
 				<div class="alert alert-no-items">

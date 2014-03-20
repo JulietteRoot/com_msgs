@@ -6,7 +6,7 @@ defined('_JEXEC') or die;
 // Importation de la classe ControllerAdmin
 jimport('joomla.application.component.controlleradmin');
 
-/** Déclaration du contrôleur Exercice. */
+/** Déclaration du contrôleur Message */
 class MsgsTableMessage extends JTable
 {
 	/** Constructeur. */

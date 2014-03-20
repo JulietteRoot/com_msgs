@@ -6,7 +6,7 @@ defined('_JEXEC') or die;
 // Importation de la classe JView.
 jimport('joomla.application.component.view');
 
-/** Déclaration de la vue Fournisseur. */
+/** Déclaration de la vue Message */
 class MsgsViewMessage extends JViewLegacy
 {
 // 	protected $form; // non -> on récupère ceux du modèle
