@@ -45,22 +45,22 @@ class MsgsViewMessage extends JViewLegacy
 // 		JToolbarHelper::divider();
 // 	}
 	
-// 	protected function getToolbar() {
-// 		// add required stylesheets from admin template
-// 		$document = JFactory::getDocument();
-// 		$document->addStyleSheet('administrator/templates/isis/css/template.css');
-// 		//now we add the necessary stylesheets from the administrator template
-// 		//in this case i make reference to the isis default administrator template in joomla 3.2
-// 		$document->addCustomTag( '<link href="administrator/templates/isis/css/template.css" rel="stylesheet" type="text/css" />'."\n\n" );
-// 		//load the JToolBar library and create a toolbar
-// 		jimport('cms.html.toolbar');
-// 		$bar =& new JToolBar( 'toolbar' );
-// 		//and make whatever calls you require
-// 		$bar->appendButton( 'Standard', 'save', 'Save', 'yourcom.save', false );
-// 		$bar->appendButton( 'Separator' );
-// 		$bar->appendButton( 'Standard', 'cancel', 'Cancel', 'yourcom.cancel', false );
-// 		//generate the html and return
-// 		return $bar->render();
-// 	}
+	protected function getToolbar() {
+		// add required stylesheets from admin template
+		$document = JFactory::getDocument();
+		$document->addStyleSheet('administrator/templates/isis/css/template.css');
+		//now we add the necessary stylesheets from the administrator template
+		//in this case i make reference to the isis default administrator template in joomla 3.2
+		$document->addCustomTag( '<link href="administrator/templates/isis/css/template.css" rel="stylesheet" type="text/css" />'."\n\n" );
+		//load the JToolBar library and create a toolbar
+		jimport('cms.html.toolbar');
+		$bar =& new JToolBar( 'toolbar' );
+		//and make whatever calls you require
+		$bar->appendButton( 'Standard', 'save', 'Save', 'yourcom.save', false );
+		$bar->appendButton( 'Separator' );
+		$bar->appendButton( 'Standard', 'cancel', 'Cancel', 'yourcom.cancel', false );
+		//generate the html and return
+		return $bar->render();
+	}
 }
 ?>

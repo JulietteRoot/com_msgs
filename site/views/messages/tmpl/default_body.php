@@ -6,9 +6,9 @@ defined('_JEXEC') or die('Restricted Access');
 foreach ($this->items as $i => $item) : ?>
 	
 	<tr>
-		<td align="center">
-			<?php echo JHtml::_('grid.id', $i, $item->id); // pour la génération des checkboxes ?>
-		</td>
+<!-- 		<td align="center"> -->
+			<?php //echo JHtml::_('grid.id', $i, $item->id); // pour la génération des checkboxes ?>
+<!-- 		</td> -->
 		
 		<td>
 			<!--  à intituler comme dans la base -->

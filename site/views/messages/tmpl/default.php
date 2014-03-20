@@ -14,6 +14,8 @@ $listOrder	= $this->escape($this->state->get('list.ordering'));
 $listDirn	= $this->escape($this->state->get('list.direction'));
 $sortFields = $this->getSortFields(); ?>
 
+<h1>Mes messages envoyés</h1>
+
 <!--  dans action : adresse de la vue courante -->
 <form action="<?php echo html_entity_decode(JRoute::_('index.php?option=com_msgs&view=messages')); ?>" method="post" name="adminForm" id="adminForm">
 		<div id="j-main-container">
@@ -34,7 +36,7 @@ $sortFields = $this->getSortFields(); ?>
 			<?php endif; ?>
 		
 			<input type="hidden" name="task" value="" /> <!-- va prendre le champ de l’action (add...) -->
-			<input type="hidden" name="boxchecked" value="0" /> <!-- quels élts sont cochés dans la liste -->
+			<!--  <input type="hidden" name="boxchecked" value="0" /> quels élts sont cochés dans la liste -->
 			<input type="hidden" name="filter_order" value="<?php echo $listOrder; ?>" /> <!-- sur quelle colonne on a cliqué -->
 			<input type="hidden" name="filter_order_Dir" value="<?php echo $listDirn; ?>" /> <!-- l'ordre -->
 			<?php echo JHtml::_('form.token'); ?> <!-- sécurité -->

@@ -68,6 +68,11 @@ class MsgsViewMessagerie extends JViewLegacy
 //         	JToolbarHelper::deleteList(false, 'messages.delete', 'JTOOLBAR_DELETE'); // ou messagerie ? deleteList(string message, string task, string caption)
 
 //         }
+
+//         if ($user->authorise('core.admin', 'com_msgs'))
+//         {
+//         	JToolbarHelper::preferences('com_msgs');
+//         }
         
     }
     
