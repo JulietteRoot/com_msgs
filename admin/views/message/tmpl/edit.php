@@ -1,11 +1,5 @@
 <?php
-/**
- * @package        Joomla.Administrator
- * @subpackage    com_eazynews
-
- * @copyright    2014 - Easy CE
- * @author        DeltaCE
- */
+// edit.php pour de l'édition ou ajout (correspond au default.php pour une liste)
 
 // Accès direct refusé.
 defined('_JEXEC') or die;
@@ -20,6 +14,7 @@ JHtml::_('behavior.modal'); ?>
             <div class="tabbable">
                 <div class="tab-content">
                     <div class="tab-pane active" id="tab_infos_section">
+                      <!-- on définit les champs qui apparaissent dans le fichier XML admin/models/forms/message.xml -->
                       <?php foreach($this->form->getFieldset('message') as $field) { ?>
                             <div class="control-group">
                                     <div class="control-label">

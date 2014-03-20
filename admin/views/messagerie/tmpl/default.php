@@ -1,4 +1,5 @@
 <?php
+// default.php pour une liste (correspond au edit.php pour de l'édition ou ajout)
 
 // Accès direct refusé.
 defined('_JEXEC') or die;

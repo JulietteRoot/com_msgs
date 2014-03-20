@@ -1,16 +1,9 @@
 <?php
-/**
- * @package		Joomla.Administrator
- * @subpackage	com_comptaconfig
-
- * @copyright	2013 - Easy CE
- * @author		DeltaCE
- */
 
 // Accès direct refusé.
 defined('_JEXEC') or die;
 
-/** Déclaration du modèle Fournisseur. */
+/** Déclaration du modèle Message */
 class MsgsModelMessage extends JModelAdmin
 {
 	/** Méthode retournant la connexion à la table des écritures. */
@@ -24,7 +17,7 @@ class MsgsModelMessage extends JModelAdmin
 	public function getForm($data = array(), $loadData = true)
 	{
 		$form = $this->loadForm('com_msgs.message', 'message', array('control' => 'jform', 'load_data' => $loadData));
-		// $form c'est le fichier XML
+		// c'est le fichier XML
 		
 		if (empty($form))
 		{

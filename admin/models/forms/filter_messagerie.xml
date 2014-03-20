@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- gère les champs de recherche, ce qu'on retrouve dans le "POST"
+(cf populateState dans admin/models/messagerie.php)
 Sert pour la barre "rechercher / outils de recherche / effacer" -->
 <form>
 	<fields name="filter">

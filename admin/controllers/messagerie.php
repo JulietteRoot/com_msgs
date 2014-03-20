@@ -1,11 +1,4 @@
 <?php
-/**
- * @package		Joomla.Administrator
- * @subpackage	com_comptaetats
-
- * @copyright	2013 - Easy CE
- * @author		DeltaCE
- */
 
 // Accès direct refusé.
 defined('_JEXEC') or die;
@@ -13,19 +6,19 @@ defined('_JEXEC') or die;
 // Importation du composant Controller
 jimport('joomla.application.component.controllerform');
 
-/** Déclaration du contrôleur Journaux. */
-class MsgsControllerMessagerie extends JControllerAdmin
+/** Déclaration du contrôleur Messagerie. */
+class MsgsControllerMessagerie extends JControllerAdmin // pluriel -> liste
 {
 	protected $text_prefix = 'COM_MSGS';
 
-	/** Constructeur. */
+	/** Constructeur (pas nécessaire si on ne le surcharge pas). */
 // 	public function __construct($config = array())
 // 	{
 // 		parent::__construct($config);
 // 	}
 	
 	/** Méthode retournant le modèle associé. */
-	// on lui dit sur quel modèle travailler : message (singulier)
+	// on lui dit sur quel modèle travailler : message (SINGULIER, sinon delete ne fcte pas [il est défini dans JModelAdmin])
 	public function getModel($name = 'message', $prefix = 'MsgsModel', $config = array('ignore_request' => true))
 	{
 		$model = parent::getModel($name, $prefix, $config);

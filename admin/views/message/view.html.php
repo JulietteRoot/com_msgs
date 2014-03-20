@@ -9,7 +9,7 @@ jimport('joomla.application.component.view');
 /** Déclaration de la vue Fournisseur. */
 class MsgsViewMessage extends JViewLegacy
 {
-// 	protected $form;
+// 	protected $form; // non -> on récupère ceux du modèle
 // 	protected $item;
 // 	protected $state;
 
@@ -17,18 +17,16 @@ class MsgsViewMessage extends JViewLegacy
 	public function display($tpl = null)
 	{
         // Récupération des variables du composant.
-		$this->form		= $this->get('Form'); // du modèle
+		$this->form		= $this->get('Form'); // du modèle !
 		$this->item		= $this->get('Item');
 		$this->state	= $this->get('State');
 
-		// Vérifice la présence d'erreur.
+		// Vérifie la présence d'erreurs.
 		if (count($errors = $this->get('Errors')))
 		{
 			JError::raiseError(500, implode("\n", $errors));
 			return false;
 		}
-		
-
 		
 		// Ajout de la barre d'outils.
 		$this->addToolbar();

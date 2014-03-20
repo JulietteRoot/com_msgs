@@ -1,17 +1,10 @@
 <?php
-/**
- * @package		Joomla.Administrator
- * @subpackage	com_comptaconfig
-
- * @copyright	2013 - Easy CE
- * @author		DeltaCE
- */
 
 // Accès direct refusé.
 defined('_JEXEC') or die;
 
 /** Déclaration du contrôleur Fournisseur. */
-class MsgsControllerMessage extends JControllerForm
+class MsgsControllerMessage extends JControllerForm  // singulier -> form
 {
 	protected $text_prefix = 'COM_MSGS';
 
@@ -24,7 +17,7 @@ class MsgsControllerMessage extends JControllerForm
 	
 // 	public function save()
 // 	{
-// 		//return parent::save();
 // 		//$this->setRedirect(html_entity_decode(JRoute::_('index.php?option=com_msgs&view=messagerie')));
+// 		//return parent::save();
 // 	}
 }

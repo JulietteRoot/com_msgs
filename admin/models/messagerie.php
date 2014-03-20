@@ -3,7 +3,7 @@
 // Accès direct refusé.
 defined('_JEXEC') or die;
 
-/** Déclaration du modèle Journaux. */
+/** Déclaration du modèle Messagerie */
 class MsgsModelMessagerie extends JModelList
 {
 	/** Constructeur. */
@@ -21,8 +21,8 @@ class MsgsModelMessagerie extends JModelList
 	}
 	
 	/** Méthode retournant la connexion à la table des écritures. */
-	// NON UTILISEE ICI
-// 	public function getTable($type = 'message', $prefix = 'MsgsTable', $config = array()) // pour donner le nom à la table → MsgsTableMessage
+	// NON UTILISEE ICI. Elle serait appelée dans le modèle qui sert pour l'édition.
+// 	public function getTable($type = 'message', $prefix = 'MsgsTable', $config = array()) // pour donner le nom de la table → MsgsTableMessage
 // 	{
 // 		return JTable::getInstance($type, $prefix, $config);
 // 	}
@@ -84,6 +84,8 @@ class MsgsModelMessagerie extends JModelList
 	
 		$search = $this->getUserStateFromRequest($this->context.'.filter.search', 'filter_search');
 		$this->setState('filter.search', $search);
+		// "filter" correspond à un tableau de filtres, ce qu’on retrouve dans le POST
+		// (on a défini le "search" dans admin/models/forms/filter_messagerie.xml)
 		
 		parent::populateState('m.created', 'desc');
 	}

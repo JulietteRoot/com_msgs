@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <form>
-	<!-- il faut mettre exactement le nom des champs dans la base -->
+	<!-- lié au fichier admin/views/message/tmpl/edit.php -->
+	<!-- définit ce qu’on récupère du POST (il faut mettre exactement le nom des champs dans la base) -->
 	<fieldset name="message">
+			<!--  il faut mettre l'id en champ caché -->
 			<field
 				name="id"
 				type="hidden"
