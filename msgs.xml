@@ -32,9 +32,16 @@
 	    <filename>index.html</filename>
 	    <filename>msgs.php</filename>
 	    <filename>controller.php</filename>
+	    <folder>controllers</folder>
 	    <folder>views</folder>
 	    <folder>models</folder>
+	    <folder>tables</folder>
     </files>
+    
+    <languages folder="site">
+		<language tag="fr-FR">language/fr-FR/fr-FR.com_msgs.ini</language>
+		<language tag="fr-FR">language/fr-FR/fr-FR.com_msgs.sys.ini</language>
+    </languages>
 
 	<administration>
 		<menu>COM_MSGS_MENU</menu>
