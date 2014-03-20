@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <layout title="message">
+    	<!-- indique le titre et la description du composant 
+    	qui apparaîtront dans l'interface "menu" de Joomla -->
+        <message>Permet d'écrire un message</message>
+    </layout>
+</metadata>
