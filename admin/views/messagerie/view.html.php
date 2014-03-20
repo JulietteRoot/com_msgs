@@ -46,6 +46,12 @@ class MsgsViewMessagerie extends JViewLegacy
         JToolBarHelper::editList('message.edit'); // singulier
         JToolBarHelper::addNew('message.add'); // singulier
         
+        $user = JFactory::getUser();
+        if ($user->authorise('core.admin', 'com_msgs'))
+        {
+        	JToolbarHelper::preferences('com_msgs');
+        }
+        
         // on utiliserait cette version si on avait la gestion des droits avec access.xml :
         
 //     	$canDo = MsgsHelper::getActions("messagerie"); // nom de la vue
@@ -69,11 +75,6 @@ class MsgsViewMessagerie extends JViewLegacy
 
 //         }
 
-//         if ($user->authorise('core.admin', 'com_msgs'))
-//         {
-//         	JToolbarHelper::preferences('com_msgs');
-//         }
-        
     }
     
     /** Méthode retournant les éléments de tris. */
