@@ -34,7 +34,7 @@ JHtml::_('behavior.modal'); ?>
         </div>
     </div>
 
-    <input type="hidden" name="task" value="message.test" /> <!-- ici le nom de mon contrôleur et la méthode -->
+    <input type="hidden" name="task" value="message.save" /> <!-- ici le nom de mon contrôleur et la méthode -->
     <?php echo JHtml::_('form.token'); ?>
     <div class="clr"></div>
     <input class="btn btn-success" type="submit" value="valider">&nbsp;&nbsp;

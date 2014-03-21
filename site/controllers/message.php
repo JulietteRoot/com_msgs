@@ -15,20 +15,20 @@ class MsgsControllerMessage extends JControllerForm  // singulier -> form
 		parent::__construct($config);
 	}
 	
-	public function test(){
-		echo "test";
-		return;
-	}
-	
-// 	public function save($key = null, $urlVar = 'id')
-// 	{
-// 		$result = parent::save($key, $urlVar);
-// 		if ($result)
-// 		{
-// 			$this->setRedirect(html_entity_decode(JRoute::_('index.php?option=com_msgs&view=messages')));
-// 		}
-// 		return $result;
+// 	public function test(){
+// 		echo "test";
+// 		return;
 // 	}
+	
+	public function save($key = null, $urlVar = 'id')
+	{
+		$result = parent::save($key, $urlVar);
+		if ($result)
+		{
+			$this->setRedirect(html_entity_decode(JRoute::_('index.php?option=com_msgs&view=messages')));
+		}
+		return $result;
+	}
 	
 // 	public function cancel()
 // 	{
