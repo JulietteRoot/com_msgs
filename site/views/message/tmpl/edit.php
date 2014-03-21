@@ -8,15 +8,10 @@ JHtml::_('behavior.tooltip');
 JHtml::_('behavior.formvalidation');
 JHtml::_('behavior.modal'); ?>
 
+<a class="btn btn-danger" href="<?php echo html_entity_decode(JRoute::_('index.php?option=com_msgs&view=messages'));?>">Annuler</a>
+
+<!-- chemin ok ? -->
 <form action="<?php echo html_entity_decode(JRoute::_('index.php?option=com_msgs')); ?>" method="post" name="adminForm" id="adminForm" autocomplete="off"  id="commission-form" class="form-validate">
-    
-    <!--  test pour la toolbar -->
-    <div>
-        <?php echo $this->getToolbar(); ?>
-	    <input type = "hidden" name = "task" value = "" />
-	    <input type = "hidden" name = "option" value = "com_msgs" />
-	</div>
-    
     <div class="row-fluid">
         <div class="span12 form-horizontal">
             <div class="tabbable">

@@ -18,27 +18,11 @@ class MsgsViewMessages extends JViewLegacy
         $this->form = $this->get('Form');
         $this->pagination = $this->get('Pagination');
 		$this->filterForm    = $this->get('FilterForm'); // recherche
-		$this->activeFilters = $this->get('ActiveFilters');  
-        
-        // Ajout de la barre d'outils.
-//         $this->addToolBar();
-        
+		$this->activeFilters = $this->get('ActiveFilters');
                  
         // Affichage de la page.
         parent::display($tpl);
     }
-
-    /** Méthode permettant d'afficher la barre d'outils. */
-//     protected function addToolbar()
-//     {
-//         // Titre de la page
-//         JToolBarHelper::title(JText::_('COM_MSGS_TITRE_MESSAGERIE'), 'list-2'); // 2ème param = l'icône qui apparait à côté du titre
-
-//         $bar = & JToolBar::getInstance('toolbar');
-        
-//         // bouton d'ajout pour la toolbar :
-//         JToolBarHelper::addNew('message.add'); // singulier
-//     }
     
     /** Méthode retournant les éléments de tris. */
 	protected function getSortFields()

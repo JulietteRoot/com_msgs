@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <metadata>
-    <layout title="message">
+    <layout title="messages">
     	<!-- indique le titre et la description du composant 
     	qui apparaîtront dans l'interface "menu" de Joomla -->
         <message>Permet de voir ses messages</message>
