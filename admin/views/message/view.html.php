@@ -55,6 +55,12 @@ class MsgsViewMessage extends JViewLegacy
 
 		JToolbarHelper::divider();
 		//JToolbarHelper::help('JHELP_COMPONENTS_COMPTATRESORERIE');
+		
+		// pour le bouton "paramètres" :
+		if ($user->authorise('core.admin', 'com_msgs'))
+		{
+			JToolbarHelper::preferences('com_msgs');
+		}
 	}
 }
 ?>

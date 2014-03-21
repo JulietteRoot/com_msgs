@@ -31,6 +31,10 @@ class MsgsModelMessagerie extends JModelList
 	/** Méthode formatant une requête SQL chargeant la liste des données, la renvoie sous forme de String */
 	protected function getListQuery()
 	{
+		// on récupère les paramètres :
+		$params = JComponentHelper::getParams('com_msgs');
+		//var_dump($params);
+		
 		// Création d'une nouvelle requete
 		$db = $this->getDbo();
 		$query = $db->getQuery(true);
@@ -64,8 +68,31 @@ class MsgsModelMessagerie extends JModelList
 		{			
 			$query->order($db->escape("m.created desc")); // tri par défaut	
 		}
+		
+		// Mis en place du filtre de recherche par archive
+// 		$archive = $this->getState('filter.archive');
+// 		if ($archive == 'tous')
+// 		{
+// 			$query->where('');
+// 		}
+// 		else if($archive == 'archive')
+// 		{
+// 			$query->where('');
+// 		}
+// 		else if($archive == 'non_archive')
+// 		{
+// 			$query->where('');
+// 		}
+		
+		// nombre de messages modulable (cf params) :
+		$query->setLimit($params->get('msg_number'));
 
-		//var_dump($query->dump());
+		// affichage du message de bienvenue si demandé (cf params)
+// 		if($params->get('welcome_msg') == 1){
+// 			echo "Bienvenue !"; // renvoyer une valeur pour la vue
+// 		}
+		
+		var_dump($query->dump());
 		return $query;
 	}
 	
@@ -86,6 +113,10 @@ class MsgsModelMessagerie extends JModelList
 		$this->setState('filter.search', $search);
 		// "filter" correspond à un tableau de filtres, ce qu’on retrouve dans le POST
 		// (on a défini le "search" dans admin/models/forms/filter_messagerie.xml)
+		
+		// pour les filtres de recherche :
+		$archive = $this->getUserStateFromRequest($this->context.'.filter.archive', 'filter_archive');
+		$this->setState('filter.archive', $archive);
 		
 		parent::populateState('m.created', 'desc');
 	}

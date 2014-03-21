@@ -12,6 +12,19 @@ Sert pour la barre "rechercher / outils de recherche / effacer" -->
 			class="js-stools-search-string" />
 	</fields>
 	
+	<field
+			name="archive"
+			type="list"
+			label="archive"
+			extension="com_msgs"
+			description="archive"
+			onchange="this.form.submit();"
+			default="non_archive" >
+			<option value="tous">COM_MSGS_TOUS</option>
+			<option value="archives">COM_MSGS_ARCHIVES</option>
+			<option value="non_archives">COM_MSGS_NON_ARCHIVES</option>
+	</field>
+	
 	<fields name="list">
 		<field
 			name="fullordering"

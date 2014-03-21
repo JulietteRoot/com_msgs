@@ -46,6 +46,7 @@ class MsgsViewMessagerie extends JViewLegacy
         JToolBarHelper::editList('message.edit'); // singulier
         JToolBarHelper::addNew('message.add'); // singulier
         
+        // pour le bouton "paramètres" :
         $user = JFactory::getUser();
         if ($user->authorise('core.admin', 'com_msgs'))
         {

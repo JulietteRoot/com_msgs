@@ -11,7 +11,7 @@ JHtml::_('behavior.modal'); ?>
 <a class="btn btn-danger" href="<?php echo html_entity_decode(JRoute::_('index.php?option=com_msgs&view=messages'));?>">Annuler</a>
 
 <!-- chemin ok ? -->
-<form action="<?php echo html_entity_decode(JRoute::_('index.php?option=com_msgs&task=message.test')); ?>" method="post" name="adminForm" id="adminForm" autocomplete="off"  id="commission-form" class="form-validate">
+<form action="<?php echo html_entity_decode(JRoute::_('index.php?option=com_msgs')); ?>" method="post" name="adminForm" id="adminForm" autocomplete="off"  id="commission-form" class="form-validate">
     <div class="row-fluid">
         <div class="span12 form-horizontal">
             <div class="tabbable">
@@ -34,7 +34,7 @@ JHtml::_('behavior.modal'); ?>
         </div>
     </div>
 
-    <input type="hidden" name="task" value="" />
+    <input type="hidden" name="task" value="message.test" /> <!-- ici le nom de mon contrôleur et la méthode -->
     <?php echo JHtml::_('form.token'); ?>
     <div class="clr"></div>
     <input class="btn btn-success" type="submit" value="valider">&nbsp;&nbsp;
