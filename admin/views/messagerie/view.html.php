@@ -18,7 +18,10 @@ class MsgsViewMessagerie extends JViewLegacy
         $this->form = $this->get('Form');
         $this->pagination = $this->get('Pagination');
 		$this->filterForm    = $this->get('FilterForm'); // recherche
-		$this->activeFilters = $this->get('ActiveFilters');  
+		$this->activeFilters = $this->get('ActiveFilters');
+		
+		// Assign data to the view
+		$this->welcome = $this->get('Welcome'); // méthode get du model
 		
 //         // Récupération des paramètres du composant.
 //         $this->params = &JComponentHelper::getParams( 'com_msgs' );

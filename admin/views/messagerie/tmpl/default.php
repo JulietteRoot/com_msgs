@@ -12,7 +12,11 @@ JHtml::_('formbehavior.chosen', 'select');
 $user		= JFactory::getUser(); // on récupère l'utilisateur connecté
 $listOrder	= $this->escape($this->state->get('list.ordering'));
 $listDirn	= $this->escape($this->state->get('list.direction'));
-$sortFields = $this->getSortFields(); ?>
+$sortFields = $this->getSortFields();
+
+if($this->welcome) : //this se réfère à la vue ?>
+	<p>Bienvenue !</p>
+<?php endif;?>
 
 <!--  dans action : adresse de la vue courante -->
 <form action="<?php echo html_entity_decode(JRoute::_('index.php?option=com_msgs&view=messagerie')); ?>" method="post" name="adminForm" id="adminForm">

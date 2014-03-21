@@ -6,6 +6,9 @@ defined('_JEXEC') or die;
 /** Déclaration du modèle Messagerie */
 class MsgsModelMessagerie extends JModelList
 {
+	
+	protected $welcome = false;
+	
 	/** Constructeur. */
 	public function __construct($config = array())
 	{
@@ -88,12 +91,22 @@ class MsgsModelMessagerie extends JModelList
 		$query->setLimit($params->get('msg_number'));
 
 		// affichage du message de bienvenue si demandé (cf params)
+// 		$bienvenue = false;
 // 		if($params->get('welcome_msg') == 1){
-// 			echo "Bienvenue !"; // renvoyer une valeur pour la vue
+// 			$bienvenue = true; // on crée une valeur pour la vue
 // 		}
 		
 		var_dump($query->dump());
 		return $query;
+	}
+	
+	// affichage du message de bienvenue si demandé (cf params)
+	public function getWelcome()
+	{
+		if(JComponentHelper::getParams('com_msgs')->get('welcome_msg') == 1){
+			$this->welcome = true; // variable pour la vue
+		}
+		return $this->welcome;
 	}
 	
 	// on aurait ici getItem() si la méthode devait être surchargée
