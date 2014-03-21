@@ -79,7 +79,7 @@ class MsgsModelMessages extends JModelList
 		$search = $this->getUserStateFromRequest($this->context.'.filter.search', 'filter_search');
 		$this->setState('filter.search', $search);
 		// "filter" correspond à un tableau de filtres, ce qu’on retrouve dans le POST
-		// (on a défini le "search" dans site/models/forms/filter_messagerie.xml)
+		// (on a défini le "search" dans site/models/forms/filter_messages.xml)
 		
 		parent::populateState('m.created', 'desc');
 	}

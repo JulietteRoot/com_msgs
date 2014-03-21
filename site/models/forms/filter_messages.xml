@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- gère les champs de recherche, ce qu'on retrouve dans le "POST"
-(cf populateState dans site/models/messagerie.php) -->
+(cf populateState dans site/models/messages.php) -->
 <form>
 	<fields name="filter">
 		<field
