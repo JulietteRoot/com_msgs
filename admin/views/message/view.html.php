@@ -28,6 +28,9 @@ class MsgsViewMessage extends JViewLegacy
 			return false;
 		}
 		
+		// menu à gauche
+		$this->sidebar = MsgsHelper::showMenu('message'); // vue courante à mettre en surbrillance
+		
 		// Ajout de la barre d'outils.
 		$this->addToolbar();
 						

@@ -20,8 +20,23 @@ if($this->welcome) : //this se réfère à la vue ?>
 
 <!--  dans action : adresse de la vue courante -->
 <form action="<?php echo html_entity_decode(JRoute::_('index.php?option=com_msgs&view=messagerie')); ?>" method="post" name="adminForm" id="adminForm">
-		<div id="j-main-container">
-			<?php
+		<!--  <div id="j-main-container"> -->
+			<?php if (!empty( $this->sidebar)) : ?>
+				<div class="span3">
+					<div class="cpanel-links">
+						<div class="sidebar-nav quick-icons">
+							<div class="j-links-groups">
+								<hr />
+								<?php echo $this->sidebar; ?>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="j-main-container" class="span9">
+			<?php else : ?>
+			    <div id="j-main-container">
+			<?php endif;
+	
 			// Importation de la barre contenant les filtres.
 			echo JLayoutHelper::render('joomla.searchtools.default', array('view' => $this));
 

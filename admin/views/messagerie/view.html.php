@@ -25,7 +25,9 @@ class MsgsViewMessagerie extends JViewLegacy
 		
 //         // Récupération des paramètres du composant.
 //         $this->params = &JComponentHelper::getParams( 'com_msgs' );
-//         $this->sidebar = ComptaetatsHelper::showMenu('recapitulatifjournaux'); // vue courante en surbrillance
+
+		// menu à gauche 
+		$this->sidebar = MsgsHelper::showMenu('messagerie'); // vue courante à mettre en surbrillance
         
         // Ajout de la barre d'outils.
         $this->addToolBar();
