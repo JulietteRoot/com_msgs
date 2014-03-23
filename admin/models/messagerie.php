@@ -72,31 +72,16 @@ class MsgsModelMessagerie extends JModelList
 			$query->order($db->escape("m.created desc")); // tri par défaut	
 		}
 		
-		// Mis en place du filtre de recherche par archive
-// 		$archive = $this->getState('filter.archive');
-// 		if ($archive == 'tous')
-// 		{
-// 			$query->where('');
-// 		}
-// 		else if($archive == 'archive')
-// 		{
-// 			$query->where('');
-// 		}
-// 		else if($archive == 'non_archive')
-// 		{
-// 			$query->where('');
-// 		}
+		// Mis en place du filtre de recherche par date ("aujourd'hui ou toutes dates")
+		$date = $this->getState('filter.date');
+		if ($date == "today"){
+			$query->where('m.created = CURRENT_DATE');
+		}
 		
 		// nombre de messages modulable (cf params) :
 		$query->setLimit($params->get('msg_number'));
-
-		// affichage du message de bienvenue si demandé (cf params)
-// 		$bienvenue = false;
-// 		if($params->get('welcome_msg') == 1){
-// 			$bienvenue = true; // on crée une valeur pour la vue
-// 		}
 		
-		var_dump($query->dump());
+		//var_dump($query->dump());
 		return $query;
 	}
 	
@@ -128,10 +113,18 @@ class MsgsModelMessagerie extends JModelList
 		// (on a défini le "search" dans admin/models/forms/filter_messagerie.xml)
 		
 		// pour les filtres de recherche :
-		$archive = $this->getUserStateFromRequest($this->context.'.filter.archive', 'filter_archive');
-		$this->setState('filter.archive', $archive);
+		$date = $this->getUserStateFromRequest($this->context.'.filter.date', 'filter_date');
+		$this->setState('filter.date', $date);
 		
 		parent::populateState('m.created', 'desc');
 	}
+	
+// 	/** Méthode permettant de générer les filtres. */
+// 	public function getFilters()
+// 	{
+// 		$filters = array();
+	
+// 		return $filters;
+// 	}
 }
 ?>

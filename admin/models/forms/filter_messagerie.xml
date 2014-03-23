@@ -10,20 +10,19 @@ Sert pour la barre "rechercher / outils de recherche / effacer" -->
 			label="COM_BANNERS_SEARCH_IN_TITLE"
 			hint="JSEARCH_FILTER"
 			class="js-stools-search-string" />
-	</fields>
-	
-	<field
-			name="archive"
+			
+			<field
+			name="date"
 			type="list"
-			label="archive"
+			label="date"
 			extension="com_msgs"
-			description="archive"
+			description="date"
 			onchange="this.form.submit();"
-			default="non_archive" >
-			<option value="tous">COM_MSGS_TOUS</option>
-			<option value="archives">COM_MSGS_ARCHIVES</option>
-			<option value="non_archives">COM_MSGS_NON_ARCHIVES</option>
-	</field>
+			default="all" >
+			<option value="today">COM_MSGS_AUJOURDHUI</option>
+			<option value="all">COM_MSGS_TOUTES_DATES</option>
+		</field>
+	</fields>
 	
 	<fields name="list">
 		<field
