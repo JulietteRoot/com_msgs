@@ -1,5 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <config>
+<!-- ce fichier correspond au bouton "paramètres" à droite -->
+
+	<!-- section "droits" -->
+	<fieldset
+		name="permissions"
+		label="JCONFIG_PERMISSIONS_LABEL"
+		description="JCONFIG_PERMISSIONS_DESC"
+		>
+
+		<field
+			name="rules"
+			type="rules"
+			label="JCONFIG_PERMISSIONS_LABEL"
+			class="inputbox"
+			filter="rules"
+			validate="rules"
+			component="com_msgs"
+			section="component" />
+	</fieldset>
 
 	<fieldset name="messages"
 		label="COM_MSGS_MESSAGES_SETTING"
@@ -10,7 +29,7 @@
 			label="JGLOBAL_MSG_NUMBERS_OPTIONS_LABEL" description="JGLOBAL_MSG_NUMBERS_OPTIONS_DESC"
 			default="5" />
 
-	</fieldset>
+	</fieldset> <!-- une section -->
 	
 	<fieldset name="divers" label="COM_MSGS_DIVERS_SETTINGS"
 		description="COM_MSGS_MSGS_DIVERS_DESC">

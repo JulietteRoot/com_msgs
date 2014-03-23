@@ -11,6 +11,7 @@ Sert pour la barre "rechercher / outils de recherche / effacer" -->
 			hint="JSEARCH_FILTER"
 			class="js-stools-search-string" />
 			
+			<!-- pour le filtre de recherche par date -->
 			<field
 			name="date"
 			type="list"
