@@ -34,7 +34,7 @@
 	<fieldset name="divers" label="COM_MSGS_DIVERS_SETTINGS"
 		description="COM_MSGS_MSGS_DIVERS_DESC">
 
-		<!-- afffichage msg de bienvenue -->
+		<!-- affichage msg de bienvenue -->
 		<field name="welcome_msg" type="radio" class="btn-group btn-group-yesno"
 			default="0" label="JGLOBAL_WELCOME_MSG_OPTIONS_LABEL" description="JGLOBAL_WELCOME_MSG_OPTIONS_DESC">
 			<option value="1">JYES</option>

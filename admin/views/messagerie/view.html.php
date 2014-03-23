@@ -27,12 +27,11 @@ class MsgsViewMessagerie extends JViewLegacy
 //         $this->params = &JComponentHelper::getParams( 'com_msgs' );
 
 		// menu à gauche 
-		$this->sidebar = MsgsHelper::showMenu('messagerie'); // vue courante à mettre en surbrillance
+		$this->sidebar = MsgsHelper::showMenu('messagerie'); // nom de la vue courante à mettre en surbrillance
         
         // Ajout de la barre d'outils.
         $this->addToolBar();
-        
-                 
+               
         // Affichage de la page.
         parent::display($tpl);
     }
@@ -77,7 +76,7 @@ class MsgsViewMessagerie extends JViewLegacy
 //         //Bouton supprimer ???
 //         if ($canDo->get('core.delete'))
 //         {
-//         	JToolbarHelper::deleteList(false, 'messages.delete', 'JTOOLBAR_DELETE'); // ou messagerie ? deleteList(string message, string task, string caption)
+//         	JToolbarHelper::deleteList(false, 'messagerie.delete', 'JTOOLBAR_DELETE'); // deleteList(string message, string task, string caption)
 
 //         }
 

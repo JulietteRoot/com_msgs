@@ -3,7 +3,7 @@
 // Accès direct refusé.
 defined('_JEXEC') or die;
 
-/** Déclaration du modèle Messags */
+/** Déclaration du modèle Messages */
 class MsgsModelMessages extends JModelList
 {
 	/** Constructeur. */
@@ -23,7 +23,7 @@ class MsgsModelMessages extends JModelList
 	/** Méthode formatant une requête SQL chargeant la liste des données, la renvoie sous forme de String */
 	protected function getListQuery()
 	{
-		// Création d'une nouvelle requete
+		// Création d'une nouvelle requête
 		$db = $this->getDbo();
 		$query = $db->getQuery(true);
 		$user = JFactory::getUser(); // pour récupérer l'utilisateur courant

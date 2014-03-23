@@ -38,7 +38,7 @@ class MsgsModelMessagerie extends JModelList
 		$params = JComponentHelper::getParams('com_msgs');
 		//var_dump($params);
 		
-		// Création d'une nouvelle requete
+		// Création d'une nouvelle requête
 		$db = $this->getDbo();
 		$query = $db->getQuery(true);
 	
@@ -79,7 +79,7 @@ class MsgsModelMessagerie extends JModelList
 		}
 		
 		// nombre de messages modulable (cf params) :
-		$query->setLimit($params->get('msg_number'));
+		$query->setLimit($params->get('msg_number')); // non fonctionnel ?
 		
 		//var_dump($query->dump());
 		return $query;

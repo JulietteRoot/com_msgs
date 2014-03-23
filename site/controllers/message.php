@@ -3,7 +3,7 @@
 // Accès direct refusé.
 defined('_JEXEC') or die;
 
-/** Déclaration du contrôleur Fournisseur. */
+/** Déclaration du contrôleur Message */
 class MsgsControllerMessage extends JControllerForm  // singulier -> form
 {
 	protected $text_prefix = 'COM_MSGS';
@@ -14,11 +14,6 @@ class MsgsControllerMessage extends JControllerForm  // singulier -> form
 		// retourne par défaut vers la vue "messages")
 		parent::__construct($config);
 	}
-	
-// 	public function test(){
-// 		echo "test";
-// 		return;
-// 	}
 	
 	public function save($key = null, $urlVar = 'id')
 	{

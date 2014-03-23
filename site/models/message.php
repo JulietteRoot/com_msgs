@@ -6,7 +6,7 @@ defined('_JEXEC') or die;
 /** Déclaration du modèle Message */
 class MsgsModelMessage extends JModelAdmin
 {
-	/** Méthode retournant la connexion à la table des écritures. */
+	/** Méthode retournant la connexion à la table des écritures */
 	public function getTable($type = 'message', $prefix = 'MsgsTable', $config = array()) // nom complet de la table → MsgsTableMessage
 	{
 		return JTable::getInstance($type, $prefix, $config);
