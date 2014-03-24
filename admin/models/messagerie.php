@@ -47,7 +47,7 @@ class MsgsModelMessagerie extends JModelList
 			  ->from('#__msgs_messagerie AS m')
 			  ->leftjoin('#__users AS u ON m.created_by = u.id');
 			
-		// Mise en place du filtre de recherche par mot clé.
+		// Mise en place du filtre de recherche par mot clé (ici uniqt sur le subject)
 		$search = $this->getState('filter.search');
 		if (!empty($search)) 
 		{
