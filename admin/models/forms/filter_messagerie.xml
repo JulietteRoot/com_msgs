@@ -22,6 +22,14 @@ Sert pour la barre "rechercher / outils de recherche / effacer" -->
 			default="all" >
 			<option value="today">COM_MSGS_AUJOURDHUI</option>
 			<option value="all">COM_MSGS_TOUTES_DATES</option>
+			
+			<!-- tous les objets en base (cf models/fields/subject.php) -->
+			<field
+			name="subject"
+			type="subject"
+			label="COM_MSGS_OBJET"
+			description="COM_MSGS_OBJET"
+			onchange="this.form.submit();" />
 		</field>
 	</fields>
 	

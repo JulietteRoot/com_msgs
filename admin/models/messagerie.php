@@ -54,6 +54,16 @@ class MsgsModelMessagerie extends JModelList
 			$search = $db->Quote('%'.$db->escape($search).'%');
 			$query->where('LOWER(m.subject) LIKE '.$search);
 		}
+		
+		// Mise en place du filtre de recherche par objet
+		$subject = $this->getState('filter.subject');
+		if (!empty($subject))
+		{
+			$subject = $db->Quote($db->escape($subject));
+			// on compare avec l'id de l'objet et pas son nom (cf models/fields/subject.php) !
+			// Rq : la donnée proviendrait en temps normal d'une autre table
+			$query->where('m.id = '.$subject);
+		}
 						
 		// Mise en place de l'ordre d'affichage.
 		$orderCol = $this->getUserStateFromRequest($this->context.'.filter_order', 'filter_order', " o.date_operation"); // Nom de la colonne triée

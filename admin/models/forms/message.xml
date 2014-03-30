@@ -13,14 +13,13 @@
 				default="0"
 				readonly="true"/>
 				
-			<field
-				name="subject"
-  				type="text"
-				label="COM_MSGS_OBJET"
-				description="COM_MSGS_OBJET"
-				required="true" />
+			<field name="subject"
+	    		type="subject"
+                label="COM_MSGS_OBJET"
+                description="COM_MSGS_OBJET"
+                class="inputbox" maxlength="255" />
 				
-				<field
+			<field
 				name="content"
   				type="text"
 				label="COM_MSGS_CONTENU"
